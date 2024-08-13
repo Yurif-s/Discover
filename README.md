@@ -9,7 +9,7 @@ Programa exclusivo e gratuito, promovido pela Rocketseat para ensino de tecnolog
   <a href="#-tecnologias">Tecnologias</a>
   <a href="#-projeto">Projeto</a>
   <a href="#-layout">Layout</a>
-  <a href="#memo-licença">Licença</a>
+  <a href="#-licença">Licença</a>
 </p>
 
 <p align="center">
@@ -18,9 +18,6 @@ Programa exclusivo e gratuito, promovido pela Rocketseat para ensino de tecnolog
 
 <br>
 
-<p align="center">
-  <img alt="projeto DevLinks" src="https://raw.githubusercontent.com/maykbrito/devlinks/main/.github/preview.jpg" width="100%">
-</p>
 
 ## 🚀 Tecnologias
 
