@@ -6,22 +6,35 @@
 
 :root {
     --text-color: white;
-    --bg-url: url(/Project/assets/bg-mobile.jpg);
+    --bg-url: url(/Discover/Project/assets/bg-mobile.jpg);
     --stroke-color: rgba(255, 255, 255, 0.5);
     --surface-color: rgba(255, 255, 255, 0.1);
     --surface-color-hover: rgba(255, 255, 255, 0.05);
     --highlight-color: rgba(255, 255, 255, 0.2);
-    --switch-bg-url: url(/Project/assets/moon-stars.svg)
+    --switch-bg-url: url(/Discover/Project/assets/moon-stars.svg);
+    --border-right-p: rgba(255, 255, 255, 0.5);
 }
 
 .light {
     --text-color: black;
-    --bg-url: url(/Project/assets/bg-mobile-light.jpg);
+    --bg-url: url(/Discover/Project/assets/bg-mobile-light.jpg);
     --stroke-color: rgba(0, 0, 0, 0.5);
     --surface-color: rgba(0, 0, 0, 0.1);
     --surface-color-hover: rgba(0, 0, 0, 0.05);
     --highlight-color: rgba(0, 0, 0, 0.2);
-    --switch-bg-url: url(/Project/assets/sun.svg)
+    --switch-bg-url: url(/Discover/Project/assets/sun.svg);
+    --border-right-p: rgba(0, 0, 0, 0.5);
+}
+
+::-webkit-scrollbar {
+    width: 4px;
+}
+::-webkit-scrollbar-track {
+    background: var(--bg-url);
+    background-position-x: right;
+}
+::-webkit-scrollbar-thumb {
+    background-color: rgba(128, 128, 128, 0.5);
 }
 
 body {
@@ -46,12 +59,20 @@ body * {
     padding: 24px;
 }
 #profile img {
-    width: 90px;
+    display: block;
+    margin: 0 auto;
+    width: 200px;
+    border-radius: 90%;
 }
 #profile p {
+    display: inline-block;
     font-weight: 500;
     line-height: 24px;
-    margin-top: 8px;
+    margin-top: 15px;
+    border-right: 5px solid var(--border-right-p);
+    white-space: nowrap;
+    overflow: hidden;
+    animation: mark .5s step-end infinite;
 }
 
 #switch {
@@ -148,10 +169,10 @@ footer {
 
 @media (min-width: 700px) {
     :root{
-        --bg-url: url(/Project/assets/bg-desktop.jpg);
+        --bg-url: url(/Discover/Project/assets/bg-desktop.jpg);
     }
     .light{
-        --bg-url: url(/Project/assets/bg-desktop-light.jpg);
+        --bg-url: url(/Discover/Project/assets/bg-desktop-light.jpg);
     }
 }
 
@@ -169,5 +190,10 @@ footer {
     }
     to {
         left: 0;
+    }
+}
+@keyframes mark {
+    50% {
+        border-right-color: transparent;
     }
 }
