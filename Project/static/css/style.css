@@ -13,6 +13,9 @@
     --highlight-color: rgba(255, 255, 255, 0.2);
     --switch-bg-url: url(/Discover/Project/assets/moon-stars.svg);
     --border-right-p: rgba(255, 255, 255, 0.5);
+    --bg-scroll-track: rgba(128, 128, 128, 0.5);
+    --a-rocket: rgb(116, 38, 189);
+    --hover-a-rocket: rgb(95, 30, 156);
 }
 
 .light {
@@ -24,6 +27,9 @@
     --highlight-color: rgba(0, 0, 0, 0.2);
     --switch-bg-url: url(/Discover/Project/assets/sun.svg);
     --border-right-p: rgba(0, 0, 0, 0.5);
+    --bg-scroll-track: rgba(28, 28, 28, 0.5);
+    --a-rocket: rgb(84, 30, 135);
+    --hover-a-rocket: rgb(117, 38, 191);
 }
 
 ::-webkit-scrollbar {
@@ -34,7 +40,7 @@
     background-position-x: right;
 }
 ::-webkit-scrollbar-thumb {
-    background-color: rgba(128, 128, 128, 0.5);
+    background-color: var(--bg-scroll-track);
 }
 
 body {
@@ -68,11 +74,23 @@ body * {
     display: inline-block;
     font-weight: 500;
     line-height: 24px;
+    width: 0;
     margin-top: 15px;
     border-right: 5px solid var(--border-right-p);
     white-space: nowrap;
     overflow: hidden;
-    animation: mark .5s step-end infinite;
+    animation: mark .7s step-end infinite, write 6s steps(22, end) infinite; 
+}
+#profile h4 {
+    font-weight: 100;
+    margin-top: 15px;
+}
+#profile h4 a {
+    color: var(--a-rocket);
+    text-decoration: none;
+}
+#profile h4 a:hover {
+    color: var(--hover-a-rocket);
 }
 
 #switch {
@@ -195,5 +213,19 @@ footer {
 @keyframes mark {
     50% {
         border-right-color: transparent;
+    }
+}
+@keyframes write {
+    20% {
+        width: 24ch;
+    }
+    70% {
+        width: 24ch;
+    }
+    85% {
+        width: 0;
+    }
+    100% {
+        width: 0;
     }
 }
