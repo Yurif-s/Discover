@@ -11,7 +11,7 @@
     --surface-color: rgba(255, 255, 255, 0.1);
     --surface-color-hover: rgba(255, 255, 255, 0.05);
     --highlight-color: rgba(255, 255, 255, 0.2);
-    --switch-bg-url: url(/Discover/Project/assets/moon-stars.svg);
+    --switch-bg-url: url(/Discover/assets/moon-stars.svg);
     --border-right-p: rgba(255, 255, 255, 0.5);
     --bg-scroll-track: rgba(128, 128, 128, 0.5);
     --a-rocket: rgb(144, 86, 199);
@@ -25,7 +25,7 @@
     --surface-color: rgba(0, 0, 0, 0.1);
     --surface-color-hover: rgba(0, 0, 0, 0.05);
     --highlight-color: rgba(0, 0, 0, 0.2);
-    --switch-bg-url: url(/Discover/Project/assets/sun.svg);
+    --switch-bg-url: url(/Discover/assets/sun.svg);
     --border-right-p: rgba(0, 0, 0, 0.5);
     --bg-scroll-track: rgba(28, 28, 28, 0.5);
     --a-rocket: rgb(84, 30, 135);
@@ -94,9 +94,10 @@ body * {
 }
 
 #switch {
-    position: relative;
+    position: absolute;
+    top: 32px;
+    left: 16px;
     width: 64px;
-    margin: 4px auto;
 }
 #switch button {
     width: 32px;
@@ -162,10 +163,11 @@ ul li a:hover {
 }
 
 #social-links {
+    position: absolute;
+    top: 16px;
+    right: 16px;
     display: flex;
-    padding: 24px 0;
     font-size: 24px;
-    justify-content: center;
 }
 #social-links a {
     display: flex;
