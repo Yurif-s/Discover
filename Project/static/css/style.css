@@ -6,7 +6,7 @@
 
 :root {
     --text-color: white;
-    --bg-url: url(/Discover/Project/assets/bg-mobile.jpg);
+    --bg-url: linear-gradient(135deg, #512BD4, #2C2C54);
     --stroke-color: rgba(255, 255, 255, 0.5);
     --surface-color: rgba(255, 255, 255, 0.1);
     --surface-color-hover: rgba(255, 255, 255, 0.05);
@@ -14,13 +14,13 @@
     --switch-bg-url: url(/Discover/Project/assets/moon-stars.svg);
     --border-right-p: rgba(255, 255, 255, 0.5);
     --bg-scroll-track: rgba(128, 128, 128, 0.5);
-    --a-rocket: rgb(116, 38, 189);
-    --hover-a-rocket: rgb(95, 30, 156);
+    --a-rocket: rgb(144, 86, 199);
+    --hover-a-rocket: rgb(156, 123, 191);
 }
 
 .light {
     --text-color: black;
-    --bg-url: url(/Discover/Project/assets/bg-mobile-light.jpg);
+    --bg-url: linear-gradient(135deg, #C8BFFF, #E0E0F0);
     --stroke-color: rgba(0, 0, 0, 0.5);
     --surface-color: rgba(0, 0, 0, 0.1);
     --surface-color-hover: rgba(0, 0, 0, 0.05);
@@ -45,7 +45,8 @@
 
 body {
     background: var(--bg-url) no-repeat top center/cover;
-    height: 100vh;
+    min-height: 100vh;
+    background-attachment: fixed;
 }
 body * {
     font-family: 'Inter', sans-serif;
@@ -179,20 +180,6 @@ ul li a:hover {
     background-color: var(--highlight-color);
 }
 
-footer {
-    padding: 24px 0;
-    text-align: center;
-    font-size: 14px;
-}
-
-@media (min-width: 700px) {
-    :root{
-        --bg-url: url(/Discover/Project/assets/bg-desktop.jpg);
-    }
-    .light{
-        --bg-url: url(/Discover/Project/assets/bg-desktop-light.jpg);
-    }
-}
 
 @keyframes slide-in {
     from {
