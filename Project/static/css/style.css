@@ -6,7 +6,7 @@
 
 :root {
     --text-color: white;
-    --bg-url: linear-gradient(135deg, #512BD4, #2C2C54);
+    --bg-url: linear-gradient(135deg, #2f1a7c, #2C2C54);
     --stroke-color: rgba(255, 255, 255, 0.5);
     --surface-color: rgba(255, 255, 255, 0.1);
     --surface-color-hover: rgba(255, 255, 255, 0.05);
@@ -37,7 +37,6 @@
 }
 ::-webkit-scrollbar-track {
     background: var(--bg-url);
-    background-position-x: right;
 }
 ::-webkit-scrollbar-thumb {
     background-color: var(--bg-scroll-track);
